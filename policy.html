@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy di Spin the Wheel - Informazioni sulla raccolta e l'utilizzo dei dati, cookie e analytics">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spinthewheel.example.com/policy.html">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Privacy Policy | Spin the Wheel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General styling */
+    :root {
+      --primary-color: #4CAF50;
+      --primary-hover: #3e8e41;
+      --primary-active: #2e6830;
+      --background-dark: #121212;
+      --background-card: #1E1E1E;
+      --background-element: #2A2A2A;
+      --text-primary: #FFFFFF;
+      --text-secondary: #CCCCCC;
+      --accent-color: #FF9800;
+      --error-color: #F44336;
+      --success-color: #4CAF50;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: var(--background-dark);
+      color: var(--text-primary);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header styling */
+    header {
+      background-color: var(--background-card);
+      padding: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      margin-right: 10px;
+      font-size: 32px;
+      color: var(--primary-color);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Main content area */
+    main {
+      flex: 1;
+      padding: 40px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .section-title h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Policy content */
+    .policy-section {
+      background-color: var(--background-card);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+
+    .policy-section h2 {
+      font-size: 24px;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--background-element);
+    }
+
+    .policy-section h3 {
+      font-size: 20px;
+      color: var(--text-primary);
+      margin: 25px 0 15px;
+    }
+
+    .policy-section p {
+      margin-bottom: 15px;
+      color: var(--text-secondary);
+    }
+
+    .policy-section ul, .policy-section ol {
+      margin: 15px 0 15px 20px;
+      color: var(--text-secondary);
+    }
+
+    .policy-section li {
+      margin-bottom: 10px;
+    }
+
+    .policy-section a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .policy-section a:hover {
+      text-decoration: underline;
+    }
+
+    .policy-section .highlight {
+      background-color: rgba(76, 175, 80, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .policy-section .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    .policy-section table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .policy-section th, .policy-section td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--background-element);
+    }
+
+    .policy-section th {
+      background-color: var(--background-element);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .policy-section tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Table of contents */
+    .toc {
+      background-color: var(--background-element);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .toc h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+
+    .toc ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .toc li {
+      margin-bottom: 8px;
+    }
+
+    .toc a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .toc a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: var(--background-card);
+      padding: 30px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        margin-top: 15px;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title h1 {
+        font-size: 28px;
+      }
+
+      .section-title p {
+        font-size: 16px;
+      }
+
+      .policy-section {
+        padding: 20px;
+      }
+
+      .policy-section h2 {
+        font-size: 22px;
+      }
+
+      .policy-section h3 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="Spin the Wheel Homepage">
+        <span class="logo-icon" aria-hidden="true">🎡</span>
+        <span>Spin the Wheel</span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#instructions">Come Usare</a></li>
+          <li><a href="index.html#features">Funzionalità</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div class="container">
+      <!-- Title section -->
+      <section class="section-title">
+        <h1>Privacy Policy</h1>
+        <p>Informazioni sulla raccolta e l'utilizzo dei dati, cookie e analytics</p>
+      </section>
+
+      <!-- Table of contents -->
+      <div class="toc">
+        <h3>Indice dei contenuti</h3>
+        <ul>
+          <li><a href="#introduction">1. Introduzione</a></li>
+          <li><a href="#data-collection">2. Raccolta dei dati</a></li>
+          <li><a href="#cookies">3. Cookie</a></li>
+          <li><a href="#ezoic">4. Ezoic Analytics e Pubblicità</a></li>
+          <li><a href="#third-party">5. Servizi di terze parti</a></li>
+          <li><a href="#rights">6. I tuoi diritti</a></li>
+          <li><a href="#changes">7. Modifiche alla Privacy Policy</a></li>
+          <li><a href="#contact">8. Contatti</a></li>
+        </ul>
+      </div>
+
+      <!-- Introduction section -->
+      <section id="introduction" class="policy-section">
+        <h2>1. Introduzione</h2>
+        <p>Benvenuto nella Privacy Policy di Spin the Wheel. Questo documento descrive come raccogliamo, utilizziamo e proteggiamo le informazioni che potrebbero essere raccolte quando utilizzi il nostro sito web.</p>
+        <p>Spin the Wheel è impegnata a proteggere la tua privacy. Abbiamo creato questa Privacy Policy per spiegare le nostre pratiche riguardanti la raccolta, l'uso e la divulgazione delle informazioni che riceviamo attraverso il nostro sito web.</p>
+        <p>Utilizzando il nostro sito web, accetti le pratiche descritte in questa Privacy Policy. Ti invitiamo a leggere attentamente questo documento per comprendere come trattiamo le tue informazioni.</p>
+        <div class="highlight">
+          <p><strong>Nota importante:</strong> Spin the Wheel è progettato per funzionare principalmente sul tuo dispositivo locale. Non raccogliamo dati personali degli utenti come nomi, indirizzi email o informazioni di pagamento. Tuttavia, utilizziamo servizi di analisi e pubblicità che potrebbero raccogliere alcuni dati di utilizzo anonimi.</p>
+        </div>
+      </section>
+
+      <!-- Data collection section -->
+      <section id="data-collection" class="policy-section">
+        <h2>2. Raccolta dei dati</h2>
+        <p>Spin the Wheel non raccoglie direttamente dati personali degli utenti. Non richiediamo la creazione di account, non raccogliamo informazioni di contatto e non memorizziamo le configurazioni della ruota sui nostri server.</p>
+        
+        <h3>2.1 Dati raccolti automaticamente</h3>
+        <p>Quando visiti il nostro sito web, alcuni dati potrebbero essere raccolti automaticamente, tra cui:</p>
+        <ul>
+          <li>Informazioni sul dispositivo (tipo di browser, sistema operativo, risoluzione dello schermo)</li>
+          <li>Indirizzo IP (in forma anonimizzata)</li>
+          <li>Pagine visitate e tempo trascorso sul sito</li>
+          <li>Referrer (il sito da cui provieni)</li>
+          <li>Dati di utilizzo anonimi (come clic, interazioni con elementi della pagina)</li>
+        </ul>
+        <p>Questi dati vengono raccolti principalmente attraverso i servizi di analisi di Ezoic e sono utilizzati in forma aggregata per migliorare l'esperienza utente e ottimizzare il sito web.</p>
+        
+        <h3>2.2 Dati memorizzati localmente</h3>
+        <p>Alcune informazioni potrebbero essere memorizzate localmente sul tuo dispositivo per migliorare la tua esperienza:</p>
+        <ul>
+          <li>Preferenze dell'utente (come impostazioni audio)</li>
+          <li>Configurazioni recenti della ruota</li>
+        </ul>
+        <p>Questi dati sono memorizzati esclusivamente sul tuo dispositivo e non vengono trasmessi ai nostri server.</p>
+      </section>
+
+      <!-- Cookies section -->
+      <section id="cookies" class="policy-section">
+        <h2>3. Cookie</h2>
+        <p>I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Utilizziamo cookie e tecnologie simili per vari scopi, come descritto di seguito.</p>
+        
+        <h3>3.1 Tipi di cookie utilizzati</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo di Cookie</th>
+                <th>Scopo</th>
+                <th>Durata</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cookie essenziali</td>
+                <td>Necessari per il funzionamento del sito web</td>
+                <td>Sessione</td>
+              </tr>
+              <tr>
+                <td>Cookie di preferenza</td>
+                <td>Memorizzano le tue preferenze (es. impostazioni audio)</td>
+                <td>1 anno</td>
+              </tr>
+              <tr>
+                <td>Cookie analitici</td>
+                <td>Aiutano a capire come gli utenti interagiscono con il sito</td>
+                <td>2 anni</td>
+              </tr>
+              <tr>
+                <td>Cookie pubblicitari</td>
+                <td>Utilizzati per mostrare annunci pertinenti</td>
+                <td>90 giorni</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h3>3.2 Gestione dei cookie</h3>
+        <p>Puoi gestire le tue preferenze sui cookie in qualsiasi momento. La maggior parte dei browser web ti permette di:</p>
+        <ul>
+          <li>Visualizzare i cookie memorizzati</li>
+          <li>Accettare o rifiutare i cookie</li>
+          <li>Cancellare tutti o alcuni cookie</li>
+        </ul>
+        <p>Per gestire i cookie, consulta le impostazioni del tuo browser. Tieni presente che la disabilitazione di alcuni cookie potrebbe influire sulla tua esperienza di navigazione e limitare alcune funzionalità del sito.</p>
+        
+        <div class="highlight">
+          <p><strong>Nota sui cookie essenziali:</strong> I cookie essenziali sono necessari per il funzionamento del sito web e non possono essere disattivati nei nostri sistemi. Sono generalmente impostati solo in risposta alle azioni da te effettuate che costituiscono una richiesta di servizi, come l'impostazione delle preferenze di privacy, l'accesso o la compilazione di moduli.</p>
+        </div>
+      </section>
+
+      <!-- Ezoic section -->
+      <section id="ezoic" class="policy-section">
+        <h2>4. Ezoic Analytics e Pubblicità</h2>
+        <p>Utilizziamo Ezoic, una piattaforma di ottimizzazione del sito web, per analizzare il traffico del sito e fornire annunci pubblicitari. Ezoic utilizza cookie e altre tecnologie di tracciamento per raccogliere dati sul tuo utilizzo del nostro sito web.</p>
+        
+        <h3>4.1 Dati raccolti da Ezoic</h3>
+        <p>Ezoic può raccogliere le seguenti informazioni:</p>
+        <ul>
+          <li>Dati di utilizzo del sito (pagine visitate, tempo trascorso, clic)</li>
+          <li>Informazioni sul dispositivo e sul browser</li>
+          <li>Indirizzo IP (in forma anonimizzata)</li>
+          <li>Dati demografici approssimativi</li>
+        </ul>
+        <p>Questi dati vengono utilizzati per ottimizzare l'esperienza utente, migliorare le prestazioni del sito e fornire annunci più pertinenti.</p>
+        
+        <h3>4.2 Pubblicità personalizzata</h3>
+        <p>Ezoic utilizza i dati raccolti per mostrare annunci pubblicitari personalizzati. Questo significa che gli annunci che vedi potrebbero essere basati sul tuo comportamento di navigazione e sui tuoi interessi.</p>
+        <p>Puoi gestire le tue preferenze pubblicitarie o disattivare la pubblicità personalizzata visitando la <a href="https://www.ezoic.com/privacy-policy/" target="_blank" rel="noopener">pagina delle preferenze sulla privacy di Ezoic</a>.</p>
+        
+        <h3>4.3 Privacy Policy di Ezoic</h3>
+        <p>Per ulteriori informazioni su come Ezoic raccoglie e utilizza i dati, consulta la <a href="https://www.ezoic.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy di Ezoic</a>.</p>
+      </section>
+
+      <!-- Third-party services section -->
+      <section id="third-party" class="policy-section">
+        <h2>5. Servizi di terze parti</h2>
+        <p>Il nostro sito web potrebbe utilizzare servizi di terze parti che raccolgono informazioni in modo indipendente. Questi servizi hanno le proprie politiche sulla privacy e pratiche di raccolta dati.</p>
+        
+        <h3>5.1 Servizi utilizzati</h3>
+        <ul>
+          <li><strong>Google Fonts:</strong> Utilizziamo Google Fonts per migliorare l'aspetto del nostro sito. Google potrebbe raccogliere dati quando carichi questi font. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</li>
+          <li><strong>CDN (Content Delivery Networks):</strong> Utilizziamo CDN per fornire contenuti in modo efficiente. Questi servizi potrebbero raccogliere dati come l'indirizzo IP e informazioni sul browser.</li>
+          <li><strong>Servizi di hosting audio:</strong> Per gli effetti sonori, utilizziamo servizi di hosting audio di terze parti che potrebbero raccogliere dati di utilizzo.</li>
+        </ul>
+        
+        <h3>5.2 Link a siti esterni</h3>
+        <p>Il nostro sito web potrebbe contenere link a siti esterni che non sono gestiti da noi. Non abbiamo controllo e non ci assumiamo alcuna responsabilità per il contenuto, le politiche sulla privacy o le pratiche di qualsiasi sito o servizio di terze parti.</p>
+      </section>
+
+      <!-- User rights section -->
+      <section id="rights" class="policy-section">
+        <h2>6. I tuoi diritti</h2>
+        <p>In conformità con le leggi sulla protezione dei dati, hai diversi diritti riguardo alle tue informazioni:</p>
+        
+        <h3>6.1 Diritti degli utenti</h3>
+        <ul>
+          <li><strong>Diritto di accesso:</strong> Hai il diritto di sapere quali dati personali raccogliamo su di te.</li>
+          <li><strong>Diritto di rettifica:</strong> Puoi richiedere la correzione di dati personali inesatti.</li>
+          <li><strong>Diritto alla cancellazione:</strong> Puoi richiedere la cancellazione dei tuoi dati personali in determinate circostanze.</li>
+          <li><strong>Diritto di limitazione del trattamento:</strong> Puoi richiedere la limitazione del trattamento dei tuoi dati personali.</li>
+          <li><strong>Diritto alla portabilità dei dati:</strong> Puoi richiedere una copia dei tuoi dati personali in un formato strutturato e leggibile elettronicamente.</li>
+          <li><strong>Diritto di opposizione:</strong> Puoi opporti al trattamento dei tuoi dati personali in determinate circostanze.</li>
+        </ul>
+        
+        <h3>6.2 Come esercitare i tuoi diritti</h3>
+        <p>Per esercitare uno qualsiasi dei tuoi diritti, puoi contattarci utilizzando le informazioni fornite nella sezione "Contatti" di questa Privacy Policy.</p>
+        <p>Risponderemo alla tua richiesta entro 30 giorni. In alcuni casi, potremmo aver bisogno di verificare la tua identità prima di elaborare la richiesta.</p>
+      </section>
+
+      <!-- Changes to policy section -->
+      <section id="changes" class="policy-section">
+        <h2>7. Modifiche alla Privacy Policy</h2>
+        <p>Potremmo aggiornare questa Privacy Policy di tanto in tanto per riflettere cambiamenti nelle nostre pratiche o per altri motivi operativi, legali o normativi.</p>
+        <p>Ti invitiamo a rivedere periodicamente questa pagina per rimanere informato sulle nostre pratiche sulla privacy. La data dell'ultima modifica sarà sempre indicata all'inizio della Privacy Policy.</p>
+        <p>Continuando a utilizzare il nostro sito web dopo eventuali modifiche alla Privacy Policy, accetti tali modifiche.</p>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="policy-section">
+        <h2>8. Contatti</h2>
+        <p>Se hai domande, commenti o richieste riguardanti questa Privacy Policy o le nostre pratiche sulla privacy, non esitare a contattarci:</p>
+        <p>Email: <a href="mailto:privacy@spinthewheel.example.com">privacy@spinthewheel.example.com</a></p>
+        <div class="highlight">
+          <p><strong>Nota:</strong> Questa Privacy Policy è stata aggiornata l'ultima volta il 18 marzo 2025.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-title">Spin the Wheel</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#instructions">Come Usare</a></li>
+            <li><a href="index.html#features">Funzionalità</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Risorse</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#instructions">Guida all'uso</a></li>
+            <li><a href="policy.html#cookies">Informazioni sui Cookie</a></li>
+            <li><a href="policy.html#privacy">Informativa sulla Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Contatti</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:info@spinthewheel.example.com">Email</a></li>
+            <li><a href="https://twitter.com/spinthewheel" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://facebook.com/spinthewheel" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spin the Wheel. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
