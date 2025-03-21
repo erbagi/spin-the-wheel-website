@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Spin the Wheel - Uno strumento gratuito per prendere decisioni casuali, fare sorteggi e giochi divertenti. Crea la tua ruota personalizzata in pochi secondi.">
-  <meta name="keywords" content="ruota della fortuna, sorteggio, decisioni casuali, wheel spinner, random picker, generatore casuale, ruota personalizzata">
+  <meta name="description" content="Wheel of Fortune Online: the best tool for making random choices, draws and fun games. Create your custom wheel and make random decisions in seconds.">
+  <meta name="keywords" content="wheel of fortune, random draw, random choices, random decisions, wheel spinner, random picker, random generator, custom wheel">
   <meta name="author" content="Spin the Wheel">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Spin the Wheel - Generatore di scelte casuali">
-  <meta property="og:description" content="Crea una ruota personalizzata per prendere decisioni casuali, fare sorteggi o giocare con gli amici. Facile, veloce e divertente!">
+  <meta property="og:title" content="Wheel of Fortune Online: 8 Ways to Make Random Choices">
+  <meta property="og:description" content="Create a custom wheel to make random decisions, draws or try your luck with friends. Easy, fast and fun!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://spinthewheel.example.com/">
   <meta property="og:image" content="https://spinthewheel.example.com/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Spin the Wheel - Generatore di scelte casuali">
-  <meta name="twitter:description" content="Crea una ruota personalizzata per prendere decisioni casuali, fare sorteggi o giocare con gli amici. Facile, veloce e divertente!">
+  <meta name="twitter:title" content="Wheel of Fortune Online: 8 Ways to Make Random Choices">
+  <meta name="twitter:description" content="Create a custom wheel to make random decisions, draws or try your luck with friends. Easy, fast and fun!">
   <meta name="twitter:image" content="https://spinthewheel.example.com/images/twitter-image.jpg">
   <link rel="canonical" href="https://spinthewheel.example.com/">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <title>Spin the Wheel - Generatore di scelte casuali | Ruota della fortuna online</title>
+  <title>Wheel of Fortune Online: 8 Ways to Make Random Choices | Spin the Wheel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,15 +28,20 @@
     :root {
       --primary-color: #4CAF50;
       --primary-hover: #3e8e41;
-      --primary-active: #2e6830;
-      --background-dark: #121212;
-      --background-card: #1E1E1E;
-      --background-element: #2A2A2A;
-      --text-primary: #FFFFFF;
-      --text-secondary: #CCCCCC;
+      --secondary-color: #2196F3;
       --accent-color: #FF9800;
-      --error-color: #F44336;
+      --background-main: #121212;
+      --background-card: #1E1E1E;
+      --background-element: #333333;
+      --text-primary: #FFFFFF;
+      --text-secondary: #BBBBBB;
+      --text-muted: #888888;
+      --border-color: #444444;
+      --shadow-color: rgba(0, 0, 0, 0.5);
       --success-color: #4CAF50;
+      --error-color: #F44336;
+      --warning-color: #FF9800;
+      --info-color: #2196F3;
     }
     
     * {
@@ -46,134 +51,68 @@
     }
     
     body {
-      background-color: var(--background-dark);
+      background-color: var(--background-main);
       color: var(--text-primary);
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Montserrat', sans-serif;
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
-
+    
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
     }
-
+    
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+    
     /* Header styling */
     header {
       background-color: var(--background-card);
-      padding: 20px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      padding: 15px 0;
+      box-shadow: 0 2px 10px var(--shadow-color);
     }
-
+    
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
+    
     .logo {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
-      color: var(--text-primary);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-icon {
-      margin-right: 10px;
-      font-size: 32px;
       color: var(--primary-color);
     }
-
-    nav ul {
+    
+    .nav-links {
       display: flex;
-      list-style: none;
+      gap: 20px;
     }
-
-    nav ul li {
-      margin-left: 20px;
-    }
-
-    nav ul li a {
-      color: var(--text-secondary);
-      text-decoration: none;
+    
+    .nav-links a {
+      color: var(--text-primary);
       font-weight: 600;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
-
-    nav ul li a:hover {
+    
+    .nav-links a:hover {
       color: var(--primary-color);
-    }
-
-    /* Popup result style */
-    .result-popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.9);
-      background-color: var(--background-card);
-      padding: 30px 50px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
-      display: none;
-      z-index: 1000;
-      text-align: center;
-      min-width: 300px;
-    }
-
-    .result-text {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: var(--accent-color);
-    }
-
-    .result-item {
-      font-size: 36px;
-      font-weight: 700;
-      margin: 20px 0;
-      color: var(--text-primary);
-    }
-
-    .confetti {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: #f00;
-      border-radius: 50%;
-    }
-
-    .fade-in {
-      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      text-decoration: none;
     }
     
-    .fade-out {
-      animation: popOut 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
-    }
-    
-    @keyframes popIn {
-      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-      80% { transform: translate(-50%, -50%) scale(1.1); }
-      100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    }
-    
-    @keyframes popOut {
-      0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-      100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-    }
-
-    @keyframes confettiDrop {
-      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(1000px) rotate(720deg); opacity: 0; }
-    }
-
     /* Main content area */
     main {
       flex: 1;
@@ -189,17 +128,17 @@
     .section-title h1 {
       font-size: 36px;
       font-weight: 700;
-      color: var(--text-primary);
       margin-bottom: 10px;
+      color: var(--primary-color);
     }
-
+    
     .section-title p {
       font-size: 18px;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
     }
-
+    
     /* Top controls for duration and elimination in control groups */
     .controls-section {
       background-color: var(--background-card);
@@ -208,19 +147,19 @@
       margin-bottom: 25px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
-
+    
     .control-group {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       margin-bottom: 15px;
     }
-
+    
     .control-group:last-child {
       margin-bottom: 0;
     }
-
+    
     .control-group h2 {
       margin: 0;
       font-size: 20px;
@@ -233,6 +172,25 @@
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .reset-button {
+      background-color: #ff7043;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .reset-button:hover {
+      background-color: #f4511e;
+      transform: translateY(-3px);
+    }
+    
+    .reset-icon {
+      font-size: 16px;
+      font-weight: bold;
     }
 
     .option-button {
@@ -242,87 +200,92 @@
       padding: 12px 24px;
       cursor: pointer;
       border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-      font-weight: 600;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
-
+    
     .option-button:hover {
-      background-color: var(--primary-hover);
+      background-color: var(--primary-color);
       transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
     }
-
+    
     .option-button.active {
       background-color: var(--primary-color);
       color: white;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
     }
-
-    .option-button:active {
-      transform: translateY(-1px);
-    }
-
+    
+    /* Checkbox styling */
     .checkbox-wrapper {
       display: flex;
       align-items: center;
       cursor: pointer;
+      font-size: 16px;
+      user-select: none;
+      color: var(--text-primary);
     }
-
+    
     .custom-checkbox {
       position: relative;
-      width: 50px;
-      height: 26px;
+      height: 24px;
+      width: 24px;
       margin-right: 10px;
     }
-
+    
     .custom-checkbox input {
+      position: absolute;
       opacity: 0;
-      width: 0;
+      cursor: pointer;
       height: 0;
+      width: 0;
     }
-
+    
     .checkmark {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
+      height: 24px;
+      width: 24px;
       background-color: var(--background-element);
-      border-radius: 34px;
-      transition: 0.3s;
+      border-radius: 4px;
+      transition: all 0.3s ease;
     }
-
-    .checkmark:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 4px;
-      bottom: 4px;
-      background-color: var(--text-secondary);
-      border-radius: 50%;
-      transition: 0.3s;
+    
+    .checkbox-wrapper:hover input ~ .checkmark {
+      background-color: #555555;
     }
-
-    input:checked + .checkmark {
+    
+    .checkbox-wrapper input:checked ~ .checkmark {
       background-color: var(--primary-color);
     }
-
-    input:checked + .checkmark:before {
-      transform: translateX(24px);
-      background-color: white;
+    
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
     }
-
-    /* Main content: wheel and names area */
+    
+    .checkbox-wrapper input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    .checkbox-wrapper .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    
+    /* Main content: wheel and names */
     .main-content {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       gap: 30px;
       flex-wrap: wrap;
     }
@@ -346,456 +309,181 @@
       min-width: 300px;
       max-width: 400px;
     }
-
+    
     .section-header {
       margin-bottom: 20px;
       text-align: center;
     }
-
+    
     .section-header h2 {
       font-size: 24px;
-      color: var(--text-primary);
       margin-bottom: 5px;
+      color: var(--primary-color);
     }
-
+    
     .section-header p {
-      font-size: 16px;
       color: var(--text-secondary);
+      font-size: 16px;
     }
-
+    
+    /* Wheel container styling */
     .wheel-container {
+      position: relative;
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
-      position: relative;
-      aspect-ratio: 1/1;
+      aspect-ratio: 1 / 1;
     }
-
-    /* Wheel and center spin styling */
+    
     .wheel {
       position: relative;
       width: 100%;
       height: 100%;
     }
-
+    
     #canvas {
       display: block;
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
     }
-
+    
     .center-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, var(--primary-color), var(--primary-hover));
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 2px 3px rgba(255, 255, 255, 0.3);
+      width: 80px;
+      height: 80px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 2;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
       transition: all 0.3s ease;
+      z-index: 2;
     }
-
+    
     .center-circle:hover {
+      background-color: var(--primary-hover);
       transform: translate(-50%, -50%) scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 0.3);
     }
-
-    .center-circle:active {
-      transform: translate(-50%, -50%) scale(0.95);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.2);
-    }
-
+    
     .spin-label {
-      font-size: 18px;
-      font-weight: 700;
       color: white;
+      font-weight: 700;
+      font-size: 18px;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
-
-    /* Pointer styling */
-    .pointer-container {
+    
+    .pointer {
       position: absolute;
       top: 50%;
-      right: -20px;
+      right: -10px;
       transform: translateY(-50%);
-      z-index: 3;
-      width: 40px;
-      height: 40px;
-    }
-
-    .pointer {
       width: 0;
       height: 0;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-right: 40px solid var(--accent-color);
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 30px solid white;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+      z-index: 3;
     }
-
-    /* Text area for names */
+    
+    /* Names input styling */
     .names-container {
       width: 100%;
     }
-
+    
     .names-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
     }
-
-    .names-title {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .names-actions {
-      display: flex;
-      gap: 10px;
-    }
-
-    .action-button {
-      background-color: var(--background-element);
-      color: var(--text-secondary);
-      border: none;
-      border-radius: 5px;
-      padding: 8px 12px;
-      cursor: pointer;
+    
+    .names-count {
       font-size: 14px;
-      transition: all 0.3s ease;
+      color: var(--text-secondary);
     }
-
-    .action-button:hover {
-      background-color: var(--primary-hover);
-      color: white;
-    }
-
+    
     textarea {
       width: 100%;
-      height: 300px;
+      height: 350px;
       background-color: var(--background-element);
       color: var(--text-primary);
-      border: 1px solid #444444;
-      padding: 15px;
+      border: 1px solid var(--border-color);
       border-radius: 8px;
-      resize: none;
-      font-family: 'Montserrat', Arial, sans-serif;
+      padding: 15px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 16px;
-      line-height: 1.5;
-      transition: border-color 0.3s;
+      resize: none;
+      transition: border-color 0.3s ease;
     }
-
+    
     textarea:focus {
       outline: none;
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
     }
-
-    .textarea-info {
-      margin-top: 10px;
-      font-size: 14px;
-      color: var(--text-secondary);
-      text-align: right;
-    }
-
-    /* Instructions section */
-    .instructions-section {
-      background-color: var(--background-card);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      margin-top: 40px;
-    }
-
-    .instructions-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .instructions-content {
+    
+    /* Result popup styling */
+    .result-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
       justify-content: center;
-    }
-
-    .instruction-card {
-      flex: 1;
-      min-width: 250px;
-      max-width: 350px;
-      background-color: var(--background-element);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .instruction-card-header {
-      display: flex;
       align-items: center;
-      margin-bottom: 15px;
+      pointer-events: none;
+      z-index: 1000;
     }
-
-    .instruction-icon {
-      width: 40px;
-      height: 40px;
-      background-color: var(--primary-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 15px;
-      font-size: 20px;
-      color: white;
-    }
-
-    .instruction-title {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .instruction-text {
-      color: var(--text-secondary);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* Features section */
-    .features-section {
-      margin-top: 40px;
-    }
-
-    .features-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .feature-card {
+    
+    .result-popup {
       background-color: var(--background-card);
+      padding: 30px 50px;
       border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+      text-align: center;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      pointer-events: none;
+      max-width: 90%;
     }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    
+    .result-popup.show {
+      transform: scale(1);
+      opacity: 1;
     }
-
-    .feature-icon {
-      font-size: 36px;
+    
+    .result-item {
+      font-size: 32px;
+      font-weight: 700;
       color: var(--primary-color);
-      margin-bottom: 15px;
+    }
+    
+    /* Confetti animation */
+    @keyframes confetti-fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(1000px) rotate(720deg); opacity: 0; }
     }
 
-    .feature-title {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 10px;
-    }
-
-    .feature-description {
-      color: var(--text-secondary);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* FAQ section */
-    .faq-section {
-      margin-top: 40px;
-    }
-
-    .faq-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .faq-item {
-      background-color: var(--background-card);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      padding: 20px;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-      background-color: var(--background-element);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .faq-question:hover {
-      background-color: rgba(76, 175, 80, 0.1);
-    }
-
-    .faq-answer {
-      padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-
-    .faq-answer.active {
-      padding: 20px;
-      max-height: 500px;
-    }
-
-    .faq-answer p {
-      color: var(--text-secondary);
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* Footer styling */
-    footer {
-      background-color: var(--background-card);
+    /* Main content area */
+    main {
+      flex: 1;
       padding: 30px 0;
-      margin-top: 40px;
-      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .footer-column {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .footer-title {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 15px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary-color);
-    }
-
-    .footer-bottom {
-      margin-top: 30px;
+    .section-title {
       text-align: center;
-      color: var(--text-secondary);
-      font-size: 14px;
-      border-top: 1px solid #333;
-      padding-top: 20px;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav ul {
-        margin-top: 15px;
-        justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0 10px;
-      }
-
-      .control-group {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .control-group h2 {
-        min-width: auto;
-      }
-
-      .main-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .wheel-section, .names-section {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .section-title h1 {
-        font-size: 28px;
-      }
-
-      .section-title p {
-        font-size: 16px;
-      }
-
-      .option-button {
-        padding: 10px 16px;
-        font-size: 14px;
-      }
-
-      .result-popup {
-        width: 90%;
-        padding: 20px;
-      }
-
-      .result-item {
-        font-size: 28px;
-      }
+      margin-bottom: 30px;
+      position: relative;
     }
 
     /* Sound control */
@@ -838,60 +526,278 @@
     /* Ad space */
     .ads {
       margin-top: 40px;
-      text-align: center;
       padding: 20px;
       background-color: var(--background-card);
-      border-radius: 8px;
+      border-radius: 12px;
+      text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
-
-    .ads-label {
-      font-size: 12px;
+    
+    .ads p {
       color: var(--text-secondary);
       margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    }
+    
+    /* How to use section */
+    .how-to-use {
+      margin: 50px 0;
+    }
+    
+    .how-to-use h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+    
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .step {
+      background-color: var(--background-card);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+    
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    
+    .step p {
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+    
+    /* FAQ section */
+    .faq {
+      margin: 50px 0;
+    }
+    
+    .faq h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+    
+    .faq-item {
+      background-color: var(--background-card);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .faq-question h3 {
+      font-size: 18px;
+      margin: 0;
+      color: var(--text-primary);
+    }
+    
+    .faq-toggle {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+    
+    .faq-item.active .faq-answer {
+      padding: 0 20px 20px;
+      max-height: 1000px;
+    }
+    
+    /* Footer styling */
+    footer {
+      background-color: var(--background-card);
+      padding: 40px 0 20px;
+      margin-top: 50px;
+      box-shadow: 0 -2px 10px var(--shadow-color);
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .footer-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      
+      .main-content {
+        flex-direction: column;
+      }
+      
+      .wheel-section, .names-section {
+        max-width: 100%;
+      }
+      
+      .steps {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .footer-column {
+        min-width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .section-title h1 {
+        font-size: 28px;
+      }
+      
+      .section-title p {
+        font-size: 16px;
+      }
+      
+      .option-button {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+      
+      .result-item {
+        font-size: 24px;
+      }
     }
   </style>
-  <!-- Structured data for SEO -->
+  
+  <!-- JSON-LD structured data for SEO -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Spin the Wheel",
-      "url": "https://spinthewheel.example.com/",
-      "description": "Uno strumento gratuito per prendere decisioni casuali, fare sorteggi e giochi divertenti. Crea la tua ruota personalizzata in pochi secondi.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
-      "screenshot": "https://spinthewheel.example.com/images/screenshot.jpg",
-      "featureList": [
-        "Ruota personalizzabile",
-        "Modalità di eliminazione",
-        "Effetti sonori",
-        "Animazioni fluide",
-        "Design responsive"
-      ]
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Spin the Wheel",
+    "url": "https://spinthewheel.example.com/",
+    "description": "A free online tool to create a customizable wheel for random choices, draws, and games.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Spin the Wheel"
     }
+  }
   </script>
 </head>
 <body>
   <!-- Header with navigation -->
   <header>
     <div class="container header-content">
-      <a href="index.html" class="logo" aria-label="Spin the Wheel Homepage">
-        <span class="logo-icon" aria-hidden="true">🎡</span>
-        <span>Spin the Wheel</span>
-      </a>
-      <nav aria-label="Navigazione principale">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#instructions">Come Usare</a></li>
-          <li><a href="#features">Funzionalità</a></li>
+      <div class="logo">Spin the Wheel</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#how-to-use">How to Use</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="policy.html">Privacy Policy</a></li>
         </ul>
@@ -904,31 +810,34 @@
     <div class="container">
       <!-- Title section -->
       <section class="section-title">
-        <h1>Spin the Wheel</h1>
-        <p>Uno strumento semplice e divertente per prendere decisioni casuali, fare sorteggi o giocare con gli amici</p>
+        <h1>Wheel of Fortune Online: Make Random Choices</h1>
+        <p>The perfect tool for making decisions, trying your luck or conducting random draws in a fair way</p>
       </section>
 
       <!-- Controls section -->
       <section class="controls-section" aria-labelledby="controls-title">
-        <h2 id="controls-title" class="sr-only">Controlli della ruota</h2>
+        <h2 id="controls-title" class="sr-only">Wheel Controls</h2>
         <div class="control-group">
-          <h2>Durata:</h2>
+          <h2>Duration:</h2>
           <div class="duration-options">
-            <button class="option-button" onclick="selectDuration('slow')" aria-pressed="false">Lenta 😱</button>
-            <button class="option-button" onclick="selectDuration('medium')" aria-pressed="true">Media 🥱</button>
-            <button class="option-button" onclick="selectDuration('fast')" aria-pressed="false">Veloce 🚀</button>
+            <button class="option-button" onclick="selectDuration('slow')" aria-pressed="false">Slow 😱</button>
+            <button class="option-button" onclick="selectDuration('medium')" aria-pressed="true">Medium 🥱</button>
+            <button class="option-button" onclick="selectDuration('fast')" aria-pressed="false">Fast 🚀</button>
           </div>
         </div>
         <div class="control-group">
-          <h2>Eliminazione:</h2>
+          <h2>Elimination:</h2>
           <div class="elimination-options">
             <label class="checkbox-wrapper">
               <div class="custom-checkbox">
-                <input type="checkbox" id="eliminateWinner" aria-label="Attiva modalità eliminazione">
+                <input type="checkbox" id="eliminateWinner" aria-label="Enable elimination mode" onchange="toggleEliminationMode(this.checked)">
                 <span class="checkmark"></span>
               </div>
-              Attiva modalità eliminazione
+              Enable elimination mode
             </label>
+            <button id="resetButton" class="option-button reset-button" onclick="resetEliminatedItems()" style="display: none;">
+              <span class="reset-icon">↻</span> Restore names
+            </button>
           </div>
         </div>
       </section>
@@ -938,38 +847,31 @@
         <!-- Wheel section -->
         <section class="wheel-section" aria-labelledby="wheel-title">
           <div class="section-header">
-            <h2 id="wheel-title">La Ruota</h2>
-            <p>Clicca sul pulsante centrale per girare</p>
+            <h2 id="wheel-title">The Wheel</h2>
+            <p>Click the center button to spin</p>
           </div>
           <div class="wheel-container">
             <div class="wheel">
-              <canvas id="canvas" width="500" height="500" aria-label="Ruota della fortuna interattiva"></canvas>
-              <div class="center-circle" onclick="spin()" aria-label="Gira la ruota" role="button" tabindex="0">
-                <span class="spin-label">Gira</span>
+              <canvas id="canvas" width="500" height="500" aria-label="Interactive wheel of fortune"></canvas>
+              <div class="center-circle" onclick="spin()" aria-label="Spin the wheel" role="button" tabindex="0">
+                <span class="spin-label">Spin</span>
               </div>
             </div>
-            <!-- Pointer positioned on the right side -->
-            <div class="pointer-container" aria-hidden="true">
-              <div class="pointer"></div>
-            </div>
+            <div class="pointer"></div>
           </div>
         </section>
-
+        
         <!-- Names section -->
         <section class="names-section" aria-labelledby="names-title">
           <div class="section-header">
-            <h2 id="names-title">Elementi</h2>
-            <p>Inserisci un elemento per riga</p>
+            <h2 id="names-title">Names</h2>
+            <p>Enter one item per line</p>
           </div>
           <div class="names-container">
             <div class="names-header">
-              <span class="names-title">Lista Elementi</span>
-              <div class="names-actions">
-                <button class="action-button" onclick="clearNames()" aria-label="Cancella tutti gli elementi">Cancella</button>
-                <button class="action-button" onclick="loadExamples()" aria-label="Carica esempi">Esempi</button>
-              </div>
+              <span class="names-count" id="namesCount">9 items</span>
             </div>
-            <textarea id="namesInput" rows="20" cols="30" oninput="createWheel()" placeholder="Inserisci un elemento per riga..." aria-label="Inserisci gli elementi della ruota, uno per riga">cat
+            <textarea id="namesInput" rows="20" cols="30" oninput="createWheel()" placeholder="Enter one item per line..." aria-label="Enter wheel items, one per line">cat
 dog
 cow
 duck
@@ -978,138 +880,75 @@ goat
 bird
 neko
 chicken</textarea>
-            <div class="textarea-info">
-              <span id="itemCount">9 elementi</span>
-            </div>
           </div>
         </section>
       </div>
-
-      <!-- Instructions section -->
-      <section class="instructions-section" id="instructions" aria-labelledby="instructions-title">
-        <h2 id="instructions-title" class="instructions-title">Come Usare Spin the Wheel</h2>
-        <div class="instructions-content">
-          <div class="instruction-card">
-            <div class="instruction-card-header">
-              <div class="instruction-icon" aria-hidden="true">1</div>
-              <h3 class="instruction-title">Inserisci gli Elementi</h3>
-            </div>
-            <p class="instruction-text">Aggiungi gli elementi che desideri nella casella di testo a destra, uno per riga. Possono essere nomi, numeri, frasi o qualsiasi cosa tu voglia!</p>
+      
+      <!-- How to use section -->
+      <section id="how-to-use" class="how-to-use">
+        <h2>How to Use Spin the Wheel</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Enter Names</h3>
+            <p>Add your items in the text area, one per line. These can be names, options, or anything you want to choose from.</p>
           </div>
-          <div class="instruction-card">
-            <div class="instruction-card-header">
-              <div class="instruction-icon" aria-hidden="true">2</div>
-              <h3 class="instruction-title">Scegli le Opzioni</h3>
-            </div>
-            <p class="instruction-text">Seleziona la durata della rotazione (lenta, media o veloce) e decidi se attivare la modalità eliminazione per rimuovere automaticamente i vincitori.</p>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Customize</h3>
+            <p>Select your preferred spin duration and decide if you want to use elimination mode to remove winners from the wheel.</p>
           </div>
-          <div class="instruction-card">
-            <div class="instruction-card-header">
-              <div class="instruction-icon" aria-hidden="true">3</div>
-              <h3 class="instruction-title">Gira la Ruota</h3>
-            </div>
-            <p class="instruction-text">Clicca sul pulsante centrale "Gira" per far girare la ruota. Attendi che si fermi per vedere il risultato. Con la modalità eliminazione attiva, il vincitore verrà rimosso automaticamente.</p>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Spin</h3>
+            <p>Click the center button to spin the wheel and let fate decide! The winner will be highlighted when the wheel stops.</p>
           </div>
         </div>
       </section>
-
-      <!-- Features section -->
-      <section class="features-section" id="features" aria-labelledby="features-title">
-        <h2 id="features-title" class="features-title">Funzionalità di Spin the Wheel</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🎨</div>
-            <h3 class="feature-title">Design Accattivante</h3>
-            <p class="feature-description">Un'interfaccia moderna e intuitiva con colori vivaci e animazioni fluide per un'esperienza utente piacevole.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🔄</div>
-            <h3 class="feature-title">Modalità Eliminazione</h3>
-            <p class="feature-description">Rimuovi automaticamente gli elementi vincenti dalla ruota, perfetto per tornei o selezioni multiple.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🔊</div>
-            <h3 class="feature-title">Effetti Sonori</h3>
-            <p class="feature-description">Suoni coinvolgenti durante la rotazione e quando viene determinato il vincitore per un'esperienza più immersiva.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">⏱️</div>
-            <h3 class="feature-title">Controllo della Velocità</h3>
-            <p class="feature-description">Scegli tra diverse velocità di rotazione per adattare l'esperienza alle tue preferenze o all'occasione.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">📱</div>
-            <h3 class="feature-title">Design Responsive</h3>
-            <p class="feature-description">Funziona perfettamente su tutti i dispositivi, dai desktop agli smartphone, per un'esperienza ottimale ovunque.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🔄</div>
-            <h3 class="feature-title">Personalizzazione Completa</h3>
-            <p class="feature-description">Aggiungi facilmente i tuoi elementi, personalizza la ruota e salva le tue configurazioni preferite.</p>
-          </div>
-        </div>
-      </section>
-
+      
       <!-- FAQ section -->
-      <section class="faq-section" id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title" class="faq-title">Domande Frequenti</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              Come posso salvare la mia ruota personalizzata?
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Attualmente, la configurazione della ruota viene salvata nel browser locale. Stiamo lavorando per implementare un sistema di account che permetterà di salvare e condividere le tue ruote personalizzate.</p>
-            </div>
+      <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <h3>Can I save my wheel configuration?</h3>
+            <span class="faq-toggle">▼</span>
           </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              Posso usare Spin the Wheel per un sorteggio in diretta?
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Assolutamente sì! Spin the Wheel è perfetto per sorteggi in diretta, sia in presenza che online. Puoi condividere lo schermo durante una videochiamata o proiettare il sito durante un evento.</p>
-            </div>
+          <div class="faq-answer">
+            <p>Currently, the wheel configuration is saved in your local browser. We're working on implementing an account system that will allow you to save and share your custom wheels.</p>
           </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              Quanti elementi posso aggiungere alla ruota?
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Puoi aggiungere fino a 50 elementi alla ruota. Per una migliore visualizzazione, consigliamo di mantenere il numero di elementi tra 2 e 20, ma il sistema funziona anche con più elementi.</p>
-            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <h3>Can I use this for live draws?</h3>
+            <span class="faq-toggle">▼</span>
           </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              La selezione è veramente casuale?
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Sì, Spin the Wheel utilizza un generatore di numeri casuali per determinare il vincitore, garantendo che ogni elemento abbia la stessa probabilità di essere selezionato.</p>
-            </div>
+          <div class="faq-answer">
+            <p>Absolutely! Spin the Wheel is perfect for live draws, both in person and online. You can share your screen during a video call or project the site during an event.</p>
           </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              Posso disattivare gli effetti sonori?
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Certamente! Puoi attivare o disattivare gli effetti sonori in qualsiasi momento utilizzando il pulsante dell'audio nell'angolo in basso a destra dello schermo.</p>
-            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <h3>How many items can I add to the wheel?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can add up to 50 items to the wheel. For better visualization, we recommend keeping the number of items between 2 and 20, but the system works with more items as well.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <h3>Is the wheel truly random?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, Spin the Wheel uses a random number generator to determine the winner, ensuring that each item has the same probability of being selected.</p>
           </div>
         </div>
       </section>
-
-      <!-- Ad space -->
-      <div class="ads">
-        <div class="ads-label">Pubblicità</div>
-        <!-- Ad content will be placed here -->
-      </div>
     </div>
   </main>
-
+  
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -1117,42 +956,39 @@ chicken</textarea>
         <div class="footer-column">
           <h3 class="footer-title">Spin the Wheel</h3>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#instructions">Come Usare</a></li>
-            <li><a href="#features">Funzionalità</a></li>
+            <li><a href="#how-to-use">How to Use</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3 class="footer-title">Risorse</h3>
+          <h3 class="footer-title">Legal</h3>
           <ul class="footer-links">
-            <li><a href="#instructions">Guida all'uso</a></li>
-            <li><a href="policy.html#cookies">Informazioni sui Cookie</a></li>
-            <li><a href="policy.html#privacy">Informativa sulla Privacy</a></li>
+            <li><a href="policy.html#cookies">Cookie Information</a></li>
+            <li><a href="policy.html#privacy">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3 class="footer-title">Contatti</h3>
+          <h3 class="footer-title">Contact</h3>
           <ul class="footer-links">
             <li><a href="mailto:info@spinthewheel.example.com">Email</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Spin the Wheel. Tutti i diritti riservati.</p>
+        <p>&copy; 2025 Spin the Wheel. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
-  <!-- Popup for showing result -->
-  <div class="result-popup" id="resultPopup" aria-live="polite" aria-atomic="true">
-    <div class="result-text">Il vincitore è:</div>
-    <div class="result-item" id="resultText"></div>
+  
+  <!-- Result popup -->
+  <div class="result-container">
+    <div class="result-popup" id="resultPopup">
+      <div class="result-item" id="resultText"></div>
+    </div>
   </div>
 
   <!-- Sound control button -->
-  <div class="sound-control" id="soundControl" onclick="toggleSound()" aria-label="Attiva/disattiva audio" role="button" tabindex="0">
+  <div class="sound-control" id="soundControl" onclick="toggleSound()" aria-label="Enable/disable audio" role="button" tabindex="0">
     <div class="sound-icon" id="soundIcon" aria-hidden="true">🔊</div>
     <div class="sound-text">Audio</div>
   </div>
@@ -1182,7 +1018,7 @@ chicken</textarea>
       
       // Update ARIA label for accessibility
       document.getElementById('soundControl').setAttribute('aria-label', 
-        soundEnabled ? 'Disattiva audio' : 'Attiva audio');
+        soundEnabled ? 'Disable audio' : 'Enable audio');
     }
     
     function playSound(sound) {
@@ -1200,33 +1036,39 @@ chicken</textarea>
       const lightness = Math.floor(Math.random() * 20) + 50; // 50-70%
       
       // Convert HSL to RGB
-      const h = hue / 360;
-      const s = saturation / 100;
-      const l = lightness / 100;
-      
-      let r, g, b;
-      
-      if (s === 0) {
-        r = g = b = l;
-      } else {
-        const hue2rgb = (p, q, t) => {
-          if (t < 0) t += 1;
-          if (t > 1) t -= 1;
-          if (t < 1/6) return p + (q - p) * 6 * t;
-          if (t < 1/2) return q;
-          if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-          return p;
+      function hslToRgb(h, s, l) {
+        h /= 360;
+        s /= 100;
+        l /= 100;
+        let r, g, b;
+        
+        if (s === 0) {
+          r = g = b = l; // achromatic
+        } else {
+          const hue2rgb = (p, q, t) => {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1/6) return p + (q - p) * 6 * t;
+            if (t < 1/2) return q;
+            if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+          };
+          
+          const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+          const p = 2 * l - q;
+          r = hue2rgb(p, q, h + 1/3);
+          g = hue2rgb(p, q, h);
+          b = hue2rgb(p, q, h - 1/3);
+        }
+        
+        return {
+          r: Math.round(r * 255),
+          g: Math.round(g * 255),
+          b: Math.round(b * 255)
         };
-        
-        const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        const p = 2 * l - q;
-        
-        r = Math.round(hue2rgb(p, q, h + 1/3) * 255);
-        g = Math.round(hue2rgb(p, q, h) * 255);
-        b = Math.round(hue2rgb(p, q, h - 1/3) * 255);
       }
       
-      return { r, g, b };
+      return hslToRgb(hue, saturation, lightness);
     }
     
     function toRad(deg) {
@@ -1237,35 +1079,15 @@ chicken</textarea>
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-    // Improved easing functions for more realistic wheel spinning
+    // Easing functions
     function easeOutCubic(t) {
       return 1 - Math.pow(1 - t, 3);
     }
     
-    function easeOutQuint(t) {
-      return 1 - Math.pow(1 - t, 5);
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     }
     
-    function easeOutElastic(t) {
-      const c4 = (2 * Math.PI) / 3;
-      return t === 0 ? 0 : t === 1 ? 1 : Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * c4) + 1;
-    }
-    
-    function easeOutBounce(t) {
-      const n1 = 7.5625;
-      const d1 = 2.75;
-      
-      if (t < 1 / d1) {
-        return n1 * t * t;
-      } else if (t < 2 / d1) {
-        return n1 * (t -= 1.5 / d1) * t + 0.75;
-      } else if (t < 2.5 / d1) {
-        return n1 * (t -= 2.25 / d1) * t + 0.9375;
-      } else {
-        return n1 * (t -= 2.625 / d1) * t + 0.984375;
-      }
-    }
-
     // Canvas and drawing variables
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
@@ -1274,45 +1096,30 @@ chicken</textarea>
     const centerX = width / 2;
     const centerY = height / 2;
     const radius = width / 2;
-
+    
     let items = document.getElementById("namesInput").value.split("\n").filter(item => item.trim() !== "");
     let currentDeg = 0;
     let step = 360 / items.length;
     let colors = [];
     let itemDegs = {};
-
-    // Initialize colors
+    
+    // Generate initial colors
     for (let i = 0; i < items.length; i++) {
       colors.push(randomColor());
     }
-
-    // Update item count
+    
+    // Update item count display
     function updateItemCount() {
-      const count = items.length;
-      document.getElementById("itemCount").textContent = count + (count === 1 ? " elemento" : " elementi");
+      const count = document.getElementById("namesInput").value.split("\n").filter(item => item.trim() !== "").length;
+      document.getElementById("namesCount").textContent = count + (count === 1 ? " item" : " items");
     }
-
-    // Clear names
-    function clearNames() {
-      playSound(clickSound);
-      document.getElementById("namesInput").value = "";
-      createWheel();
-    }
-
-    // Load example names
-    function loadExamples() {
-      playSound(clickSound);
-      document.getElementById("namesInput").value = "Pizza\nPasta\nSushi\nHamburger\nInsalata\nGelato\nTaco\nRisotto";
-      createWheel();
-    }
-
-    // Create wheel based on input
+    
+    // Create wheel from textarea input
     function createWheel() {
       items = document.getElementById("namesInput").value.split("\n").filter(item => item.trim() !== "");
-      updateItemCount();
+      
       step = items.length > 0 ? 360 / items.length : 360;
       
-      // Regenerate colors if needed
       if (colors.length !== items.length) {
         colors = [];
         for (let i = 0; i < items.length; i++) {
@@ -1320,88 +1127,72 @@ chicken</textarea>
         }
       }
       
+      updateItemCount();
       draw();
     }
-
+    
     // Draw the wheel
     function draw() {
       ctx.clearRect(0, 0, width, height);
       
-      // Draw outer circle (wheel background)
+      // Draw wheel background
       ctx.beginPath();
-      ctx.arc(centerX, centerY, radius, toRad(0), toRad(360));
-      ctx.fillStyle = "#222";
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#333";
       ctx.fill();
       
-      // Draw wheel border
-      ctx.beginPath();
-      ctx.arc(centerX, centerY, radius, toRad(0), toRad(360));
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = "#444";
-      ctx.stroke();
-
+      // Draw segments
       let startDeg = currentDeg;
       itemDegs = {};
       
-      // Draw wheel segments
       for (let i = 0; i < items.length; i++, startDeg += step) {
         let endDeg = startDeg + step;
         let color = colors[i];
-        let colorStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
-
+        
         // Draw outer segment (darker)
         ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
         ctx.arc(centerX, centerY, radius - 2, toRad(startDeg), toRad(endDeg));
-        let colorStyle2 = `rgb(${Math.max(color.r - 40, 0)}, ${Math.max(color.g - 40, 0)}, ${Math.max(color.b - 40, 0)})`;
-        ctx.fillStyle = colorStyle2;
-        ctx.lineTo(centerX, centerY);
-        ctx.fill();
-
-        // Draw inner segment (brighter)
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, radius - 30, toRad(startDeg), toRad(endDeg));
-        ctx.fillStyle = colorStyle;
-        ctx.lineTo(centerX, centerY);
+        ctx.closePath();
+        ctx.fillStyle = `rgb(${Math.max(color.r - 30, 0)}, ${Math.max(color.g - 30, 0)}, ${Math.max(color.b - 30, 0)})`;
         ctx.fill();
         
-        // Draw segment divider lines
+        // Draw inner segment (brighter)
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
-        ctx.lineTo(
-          centerX + Math.cos(toRad(startDeg)) * radius,
-          centerY + Math.sin(toRad(startDeg)) * radius
-        );
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#222";
-        ctx.stroke();
-
+        ctx.arc(centerX, centerY, radius - 30, toRad(startDeg), toRad(endDeg));
+        ctx.closePath();
+        ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
+        ctx.fill();
+        
         // Draw text
         ctx.save();
         ctx.translate(centerX, centerY);
         ctx.rotate(toRad((startDeg + endDeg) / 2));
         ctx.textAlign = "center";
         ctx.fillStyle = (color.r + color.g + color.b > 550) ? "#000" : "#fff";
-        ctx.font = 'bold 20px Montserrat';
+        ctx.font = 'bold 24px Montserrat';
         
         // Adjust text size based on length
-        const textLength = items[i].length;
+        let textLength = items[i].length;
         if (textLength > 10) {
-          ctx.font = 'bold 16px Montserrat';
+          ctx.font = 'bold 20px Montserrat';
         }
         if (textLength > 15) {
-          ctx.font = 'bold 14px Montserrat';
+          ctx.font = 'bold 16px Montserrat';
         }
         
-        ctx.fillText(items[i], radius * 0.65, 8);
+        ctx.fillText(items[i], 130, 10);
         ctx.restore();
-
-        // Store segment angles
+        
+        // Store segment degrees for winner detection
         itemDegs[items[i]] = { startDeg: startDeg, endDeg: endDeg };
       }
     }
-
-    // Determine the winner based on pointer position
+    
+    // Determine winner based on pointer position
     function updateWinner() {
+      // Fixed pointer angle at 0° (right side)
       const pointerAngle = 0;
       let winner = null;
       
@@ -1424,88 +1215,79 @@ chicken</textarea>
       
       return winner;
     }
-
-    // Create confetti effect
-    function createConfetti() {
-      const confettiCount = 150;
-      const container = document.querySelector('.result-popup');
-      const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', 
-                      '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', 
-                      '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
+    
+    // Show result popup
+    function showResultPopup(result) {
+      const popup = document.getElementById("resultPopup");
+      const resultText = document.getElementById("resultText");
       
       // Clear any existing confetti
       const existingConfetti = document.querySelectorAll('.confetti');
       existingConfetti.forEach(c => c.remove());
       
-      // Create new confetti pieces
-      for (let i = 0; i < confettiCount; i++) {
+      // Set result text
+      resultText.textContent = result ? `Winner: ${result}` : "No winner!";
+      
+      // Show popup with animation
+      popup.classList.add("show");
+      
+      // Create confetti effect
+      if (result) {
+        createConfetti();
+      }
+      
+      // Hide popup after delay
+      setTimeout(() => {
+        popup.classList.remove("show");
+        
+        // Remove confetti after additional delay
+        setTimeout(() => { 
+          const confetti = document.querySelectorAll('.confetti');
+          confetti.forEach(c => c.remove());
+        }, 2000);
+      }, 3000);
+    }
+    
+    // Create confetti effect
+    function createConfetti() {
+      const container = document.querySelector('.result-container');
+      const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
+      
+      for (let i = 0; i < 100; i++) {
         const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
+        confetti.className = 'confetti';
         
-        // Random properties
-        const size = Math.random() * 10 + 5;
         const color = colors[Math.floor(Math.random() * colors.length)];
+        const size = Math.random() * 10 + 5;
         const left = Math.random() * 100;
-        const delay = Math.random() * 3;
-        const duration = Math.random() * 3 + 3;
         
-        // Apply styles
-        confetti.style.width = `${size}px`;
-        confetti.style.height = `${size}px`;
-        confetti.style.backgroundColor = color;
-        confetti.style.left = `${left}%`;
-        confetti.style.top = '0';
-        confetti.style.position = 'absolute';
-        confetti.style.animation = `confettiDrop ${duration}s ease-in ${delay}s forwards`;
-        confetti.style.opacity = '0';
+        confetti.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          background-color: ${color};
+          top: -20px;
+          left: ${left}%;
+          opacity: 1;
+          border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+          animation: confetti-fall ${Math.random() * 3 + 2}s linear forwards;
+          animation-delay: ${Math.random() * 2}s;
+        `;
         
         container.appendChild(confetti);
       }
     }
-
-    // Show result popup with enhanced animation
-    function showResultPopup(result) {
-      const popup = document.getElementById("resultPopup");
-      const resultText = document.getElementById("resultText");
-      
-      if (!result) {
-        resultText.textContent = "Nessun vincitore!";
-      } else {
-        resultText.textContent = result;
-        playSound(winSound);
-        createConfetti();
-      }
-      
-      popup.classList.remove("fade-out");
-      popup.style.display = "block";
-      popup.classList.add("fade-in");
-      
-      setTimeout(() => {
-        popup.classList.remove("fade-in");
-        popup.classList.add("fade-out");
-        setTimeout(() => { 
-          popup.style.display = "none";
-          
-          // Remove confetti after animation
-          const confetti = document.querySelectorAll('.confetti');
-          confetti.forEach(c => c.remove());
-        }, 500);
-      }, 4000);
-    }
-
-    // Spinning variables
+    
+    // Spin variables
     let speed = 0;
     let maxRotation = 0;
     let startTime = 0;
     let duration = 6000;
     let spinning = false;
     let selectedDuration = 'medium';
-    let currentEasing = easeOutCubic;
-
-    // Select duration
+    
+    // Select spin duration
     function selectDuration(durationType) {
-      playSound(clickSound);
-      
       document.querySelectorAll('.option-button').forEach(button => {
         button.classList.remove('active');
         button.setAttribute('aria-pressed', 'false');
@@ -1520,31 +1302,17 @@ chicken</textarea>
       selectedDuration = durationType;
       
       switch (durationType) {
-        case 'slow': 
-          duration = 12000;
-          currentEasing = easeOutCubic; // Cambiato da easeOutElastic a easeOutCubic per una rotazione più fluida senza oscillazioni
-          break;
-        case 'medium': 
-          duration = 7000;
-          currentEasing = easeOutCubic;
-          break;
-        case 'fast': 
-          duration = 4000;
-          currentEasing = easeOutQuint;
-          break;
+        case 'slow': duration = 10000; break;
+        case 'medium': duration = 6000; break;
+        case 'fast': duration = 3000; break;
       }
     }
-
+    
     // Animation function
     function animate(timestamp) {
       if (!spinning) return;
       
-      if (!startTime) {
-        startTime = timestamp;
-        // Play spin sound when animation starts
-        playSound(spinSound);
-      }
-      
+      if (!startTime) startTime = timestamp;
       let progress = (timestamp - startTime) / duration;
       
       if (progress >= 1) {
@@ -1552,15 +1320,23 @@ chicken</textarea>
         spinning = false;
         speed = 0;
         
+        // Determine winner
         let winner = updateWinner();
+        
+        // Play win sound
+        playSound(winSound);
+        
+        // Show result
         showResultPopup(winner);
         
+        // Check if elimination mode is enabled
         if (document.getElementById("eliminateWinner").checked && winner) {
           eliminateWinner(winner);
         }
       }
       
       // Apply easing function for more realistic deceleration
+      let currentEasing = easeOutCubic;
       let easedProgress = currentEasing(progress);
       currentDeg = startDeg + easedProgress * maxRotation;
       
@@ -1571,18 +1347,35 @@ chicken</textarea>
       }
     }
 
+    // Variables to track eliminated items
+    let eliminatedItems = [];
+    let originalItems = [];
+    let originalColors = [];
+    
     // Eliminate winner function
     function eliminateWinner(winner) {
       let index = items.indexOf(winner);
       
       if (index !== -1) {
-        // Remove the winner from items and colors arrays
+        // Store the original items and colors if this is the first elimination
+        if (eliminatedItems.length === 0) {
+          originalItems = [...items];
+          originalColors = [...colors];
+        }
+        
+        // Add the winner to eliminated items
+        eliminatedItems.push(winner);
+        
+        // Remove the winner from items and colors arrays (only from wheel, not from textarea)
         items.splice(index, 1);
         colors.splice(index, 1);
         
-        // Update textarea
-        document.getElementById("namesInput").value = items.join('\n');
+        // Do NOT update textarea - keep the names in the list
+        // document.getElementById("namesInput").value = items.join('\n');
         updateItemCount();
+        
+        // Show reset button when items are eliminated
+        toggleResetButton(true);
         
         // Recalculate step
         step = items.length > 0 ? 360 / items.length : 360;
@@ -1614,6 +1407,62 @@ chicken</textarea>
         window.requestAnimationFrame(updateWheel);
       }
     }
+    
+    // Reset eliminated items function
+    function resetEliminatedItems() {
+      if (eliminatedItems.length > 0) {
+        // Restore original items and colors
+        items = [...originalItems];
+        colors = [...originalColors];
+        
+        // Clear eliminated items
+        eliminatedItems = [];
+        
+        // Recalculate step
+        step = items.length > 0 ? 360 / items.length : 360;
+        
+        // Update wheel
+        draw();
+        
+        // Hide reset button
+        toggleResetButton(false);
+        
+        // Show success message
+        showResultPopup("Names restored!");
+      }
+    }
+    
+    // Show notification function
+    function showNotification(message) {
+      showResultPopup(message);
+    }
+    
+    // Toggle elimination mode
+    function toggleEliminationMode(enabled) {
+      // Show reset button only if there are eliminated items
+      if (enabled) {
+        // Show reset button if there are eliminated items
+        toggleResetButton(eliminatedItems.length > 0);
+      } else {
+        // Hide reset button when elimination mode is disabled
+        toggleResetButton(false);
+        
+        // If there are eliminated items and elimination mode is turned off, ask if user wants to reset
+        if (eliminatedItems.length > 0) {
+          if (confirm("Do you want to restore all eliminated names to the wheel?")) {
+            resetEliminatedItems();
+          }
+        }
+      }
+    }
+    
+    // Toggle reset button visibility
+    function toggleResetButton(show) {
+      const resetButton = document.getElementById("resetButton");
+      if (resetButton) {
+        resetButton.style.display = show ? "inline-block" : "none";
+      }
+    }
 
     // Spin function
     let startDeg = 0;
@@ -1623,64 +1472,45 @@ chicken</textarea>
       // Play click sound
       playSound(clickSound);
       
+      // Set starting position
       startDeg = currentDeg;
       
-      // Determine a random winner
+      // Calculate target position
       let targetIndex = Math.floor(Math.random() * items.length);
       let targetStartDeg = itemDegs[items[targetIndex]].startDeg % 360;
       
-      // Calculate rotations based on selected duration
-      let additionalRotations;
-      
-      switch (selectedDuration) {
-        case 'slow': 
-          additionalRotations = randomRange(6, 10);
-          break;
-        case 'medium': 
-          additionalRotations = randomRange(4, 7);
-          break;
-        case 'fast': 
-          additionalRotations = randomRange(2, 4);
-          break;
-        default:
-          additionalRotations = randomRange(4, 7);
-      }
+      // Calculate number of rotations based on duration
+      let additionalRotations = randomRange(3, 6);
+      if (selectedDuration === 'slow') additionalRotations = randomRange(5, 8);
+      if (selectedDuration === 'fast') additionalRotations = randomRange(1, 3);
       
       // Calculate total rotation
-      maxRotation = (additionalRotations * 360) + (360 - targetStartDeg) + randomRange(-step / 3, step / 3);
+      maxRotation = (additionalRotations * 360) + (360 - targetStartDeg) + randomRange(-step / 2, step / 2);
       
       // Start spinning
       spinning = true;
       startTime = 0;
+      
+      // Play spin sound
+      playSound(spinSound);
+      
+      // Start animation
       window.requestAnimationFrame(animate);
     }
-
-    // Toggle FAQ answers
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const isExpanded = element.getAttribute('aria-expanded') === 'true';
-      
-      // Update ARIA attributes
-      element.setAttribute('aria-expanded', !isExpanded);
-      
-      // Toggle the answer visibility
-      if (isExpanded) {
-        answer.classList.remove('active');
-        element.querySelector('.faq-icon').textContent = '+';
-      } else {
-        answer.classList.add('active');
-        element.querySelector('.faq-icon').textContent = '−';
-      }
+    
+    // Toggle FAQ items
+    function toggleFAQ(item) {
+      item.classList.toggle('active');
     }
-
+    
     // Keyboard accessibility
-    document.addEventListener('keydown', function(e) {
-      // Space or Enter key for spin button
-      if ((e.key === ' ' || e.key === 'Enter') && 
-          (document.activeElement === document.querySelector('.center-circle') ||
-           document.activeElement === document.querySelector('.sound-control'))) {
-        e.preventDefault();
-        document.activeElement.click();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (document.activeElement === document.querySelector('.center-circle') || 
+            document.activeElement === document.querySelector('.sound-control')) {
+          e.preventDefault();
+          document.activeElement.click();
+        }
       }
     });
 
@@ -1690,23 +1520,6 @@ chicken</textarea>
       selectDuration('medium');
       createWheel();
       updateItemCount();
-      
-      // Add screen reader only style
-      const style = document.createElement('style');
-      style.textContent = `
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border-width: 0;
-        }
-      `;
-      document.head.appendChild(style);
     });
   </script>
 </body>
